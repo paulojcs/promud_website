@@ -7,21 +7,13 @@
 
   // ---- HEADER SCROLL BEHAVIOR ----
   const header = document.getElementById('site-header');
-  const isHomePage = document.querySelector('.hero') !== null;
 
   function updateHeader() {
-    const scrolled = window.scrollY > 60;
-    if (scrolled) {
+    if (window.scrollY > 60) {
       header.classList.add('scrolled');
-      header.classList.remove('hero-header');
     } else {
       header.classList.remove('scrolled');
-      if (isHomePage) header.classList.add('hero-header');
     }
-  }
-
-  if (isHomePage) {
-    header.classList.add('hero-header');
   }
 
   window.addEventListener('scroll', updateHeader, { passive: true });

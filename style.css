@@ -180,20 +180,29 @@ em { font-style: italic; color: var(--rose); }
   width: auto;
   display: block;
   transition: opacity 0.2s;
+  border-radius: 10px;
+  /* Remove white box on dark backgrounds using multiply blend */
+  mix-blend-mode: multiply;
 }
 .logo-img:hover { opacity: 0.85; }
+/* When header has scrolled (light bg), blend mode not needed */
+.site-header.scrolled .logo-img {
+  mix-blend-mode: normal;
+}
 .logo-img-footer {
   height: 64px;
-  /* On the dark footer the logo has a white background built-in, looks good as-is */
+  mix-blend-mode: normal; /* footer is dark, white bg logo looks fine */
+  border-radius: 10px;
 }
 .main-nav {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
+/* Default nav state: used on inner pages where header sits over dark page-hero */
 .nav-link {
   font-size: 0.875rem;
-  color: var(--text-mid);
+  color: rgba(255,255,255,0.85);
   font-weight: 400;
   position: relative;
   transition: color 0.2s;
@@ -203,29 +212,40 @@ em { font-style: italic; color: var(--rose); }
   position: absolute;
   left: 0; bottom: -4px;
   width: 0; height: 1.5px;
-  background: var(--rose);
+  background: var(--rose-light);
   transition: width 0.3s ease;
 }
-.nav-link:hover, .nav-link.active { color: var(--plum); }
-.nav-link:hover::after, .nav-link.active::after { width: 100%; }
-.site-header.hero-header .nav-link { color: rgba(255,255,255,0.85); }
-.site-header.hero-header .nav-link:hover { color: #fff; }
+.nav-link:hover { color: #fff; }
+.nav-link:hover::after { width: 100%; }
+.nav-link.active { color: #fff; }
+.nav-link.active::after { width: 100%; }
+/* Once scrolled, switch to dark text (light background) */
+.site-header.scrolled .nav-link { color: var(--text-mid); }
+.site-header.scrolled .nav-link::after { background: var(--rose); }
+.site-header.scrolled .nav-link:hover { color: var(--plum); }
+.site-header.scrolled .nav-link.active { color: var(--plum); }
 .nav-cta {
   font-size: 0.8rem;
   font-weight: 500;
   padding: 0.55rem 1.2rem;
-  background: var(--plum);
+  background: rgba(255,255,255,0.15);
   color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
   border-radius: var(--radius);
   transition: var(--transition);
 }
 .nav-cta:hover {
-  background: var(--plum-deep);
+  background: rgba(255,255,255,0.25);
   transform: translateY(-1px);
 }
-.site-header.hero-header .nav-cta {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.35);
+/* Once scrolled, CTA becomes solid plum */
+.site-header.scrolled .nav-cta {
+  background: var(--plum);
+  border-color: var(--plum);
+  color: #fff;
+}
+.site-header.scrolled .nav-cta:hover {
+  background: var(--plum-deep);
 }
 .hamburger {
   display: none;
