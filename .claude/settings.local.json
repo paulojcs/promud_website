@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp logo.svg logo.white-bg.svg.bak)",
+      "Bash(sed -i '3,485d' logo.svg)"
+    ]
+  }
+}

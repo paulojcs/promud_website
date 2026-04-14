@@ -155,13 +155,16 @@ em { font-style: italic; color: var(--rose); }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: transparent;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  background: rgba(250, 248, 246, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(74, 32, 64, 0.06);
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 .site-header.scrolled {
   background: rgba(250, 248, 246, 0.97);
   box-shadow: 0 1px 0 rgba(74,32,64,0.08);
-  backdrop-filter: blur(12px);
+  border-bottom-color: transparent;
 }
 .header-inner {
   max-width: 1240px;
@@ -180,29 +183,19 @@ em { font-style: italic; color: var(--rose); }
   width: auto;
   display: block;
   transition: opacity 0.2s;
-  border-radius: 10px;
-  /* Remove white box on dark backgrounds using multiply blend */
-  mix-blend-mode: multiply;
 }
 .logo-img:hover { opacity: 0.85; }
-/* When header has scrolled (light bg), blend mode not needed */
-.site-header.scrolled .logo-img {
-  mix-blend-mode: normal;
-}
 .logo-img-footer {
   height: 64px;
-  mix-blend-mode: normal; /* footer is dark, white bg logo looks fine */
-  border-radius: 10px;
 }
 .main-nav {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-/* Default nav state: used on inner pages where header sits over dark page-hero */
 .nav-link {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.85);
+  color: var(--text-mid);
   font-weight: 400;
   position: relative;
   transition: color 0.2s;
@@ -212,40 +205,27 @@ em { font-style: italic; color: var(--rose); }
   position: absolute;
   left: 0; bottom: -4px;
   width: 0; height: 1.5px;
-  background: var(--rose-light);
+  background: var(--rose);
   transition: width 0.3s ease;
 }
-.nav-link:hover { color: #fff; }
+.nav-link:hover { color: var(--plum); }
 .nav-link:hover::after { width: 100%; }
-.nav-link.active { color: #fff; }
+.nav-link.active { color: var(--plum); }
 .nav-link.active::after { width: 100%; }
-/* Once scrolled, switch to dark text (light background) */
-.site-header.scrolled .nav-link { color: var(--text-mid); }
-.site-header.scrolled .nav-link::after { background: var(--rose); }
-.site-header.scrolled .nav-link:hover { color: var(--plum); }
-.site-header.scrolled .nav-link.active { color: var(--plum); }
 .nav-cta {
   font-size: 0.8rem;
   font-weight: 500;
   padding: 0.55rem 1.2rem;
-  background: rgba(255,255,255,0.15);
+  background: var(--plum);
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.35);
+  border: 1px solid var(--plum);
   border-radius: var(--radius);
   transition: var(--transition);
 }
 .nav-cta:hover {
-  background: rgba(255,255,255,0.25);
-  transform: translateY(-1px);
-}
-/* Once scrolled, CTA becomes solid plum */
-.site-header.scrolled .nav-cta {
-  background: var(--plum);
-  border-color: var(--plum);
-  color: #fff;
-}
-.site-header.scrolled .nav-cta:hover {
   background: var(--plum-deep);
+  border-color: var(--plum-deep);
+  transform: translateY(-1px);
 }
 .hamburger {
   display: none;
