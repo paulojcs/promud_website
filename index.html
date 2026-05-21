@@ -7,7 +7,7 @@
   <meta name="description" content="Ambulatório especializado no tratamento de mulheres com transtornos por uso de álcool e outras drogas. Instituto de Psiquiatria HC-FMUSP." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,350;0,6..72,400;0,6..72,450;0,6..72,500;1,6..72,300;1,6..72,400&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,7 +23,7 @@
         <a href="assistencia.html" class="nav-link">Assistência</a>
         <a href="pesquisa.html" class="nav-link">Pesquisa</a>
         <a href="equipe.html" class="nav-link">Equipe</a>
-        <a href="assistencia.html#contato" class="nav-cta">Buscar Atendimento</a>
+        <a href="assistencia.html#contato" class="nav-cta">Buscar atendimento</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -34,16 +34,14 @@
       <a href="assistencia.html">Assistência</a>
       <a href="pesquisa.html">Pesquisa</a>
       <a href="equipe.html">Equipe</a>
-      <a href="assistencia.html#contato">Buscar Atendimento</a>
+      <a href="assistencia.html#contato">Buscar atendimento</a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg">
-      <div class="hero-gradient"></div>
-      <div class="hero-noise"></div>
-      <div class="hero-lines"></div>
+      <div class="hero-grain"></div>
     </div>
     <div class="hero-content">
       <div class="hero-badge fade-up">IPq · HC-FMUSP · desde 1996</div>
@@ -55,72 +53,91 @@
         Programa do Instituto de Psiquiatria do Hospital das Clínicas da USP, com abordagem multidisciplinar e específica para as necessidades de gênero.
       </p>
       <div class="hero-actions fade-up delay-3">
-        <a href="assistencia.html" class="btn btn-primary">Sobre a assistência</a>
-        <a href="pesquisa.html" class="btn btn-ghost">Sobre a pesquisa</a>
+        <a href="assistencia.html#contato" class="btn btn-red btn-arrow">Buscar atendimento</a>
+        <a href="assistencia.html" class="btn btn-ghost">Sobre a assistência</a>
       </div>
     </div>
-    <div class="hero-stats fade-up delay-3">
-      <div class="stat">
-        <span class="stat-n">IPq</span>
-        <span class="stat-l">HC-FMUSP · USP</span>
+
+    <!-- Faixa institucional — substitui as "stats" vazias por marcadores reais -->
+    <div class="institutional-strip fade-up delay-4">
+      <div class="inst-item">
+        <span class="inst-item-key">29</span>
+        <span class="inst-item-val">anos de assistência ininterrupta desde 1996</span>
       </div>
-      <div class="stat-div"></div>
-      <div class="stat">
-        <span class="stat-n">UNODC</span>
-        <span class="stat-l">modelo replicável reconhecido</span>
+      <div class="inst-item">
+        <span class="inst-item-key">7</span>
+        <span class="inst-item-val">áreas profissionais na equipe multidisciplinar</span>
       </div>
-      <div class="stat-div"></div>
-      <div class="stat">
-        <span class="stat-n">Multi</span>
-        <span class="stat-l">equipe multidisciplinar</span>
+      <div class="inst-item">
+        <span class="inst-item-key">UNODC</span>
+        <span class="inst-item-val">modelo replicável reconhecido internacionalmente</span>
+      </div>
+      <div class="inst-item">
+        <span class="inst-item-key">IPq</span>
+        <span class="inst-item-val">Hospital das Clínicas · Faculdade de Medicina da USP</span>
       </div>
     </div>
   </section>
 
-  <!-- TWO PILLARS -->
-  <section class="pillars">
-    <div class="pillar pillar-assistencia" onclick="location.href='assistencia.html'">
-      <div class="pillar-icon">
-        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M30 32l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+  <!-- THREE PILLARS — agora consistente com "Assistência, ensino e pesquisa" -->
+  <section class="pillars-section">
+    <div class="pillars-head">
+      <div>
+        <span class="section-label reveal"></span>
+        <h2 class="reveal">Assistência, ensino e pesquisa, articulados em um mesmo serviço.</h2>
       </div>
-      <div class="pillar-body">
-        <h2 class="pillar-title">Assistência</h2>
-        <p class="pillar-desc">Tratamento ambulatorial multidisciplinar para mulheres com transtornos por uso de álcool e outras drogas.</p>
+      <p class="pillars-head-aside reveal">
+</p>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar pillar-assistencia reveal" onclick="location.href='assistencia.html'" role="button" tabindex="0">
+        <span class="pillar-num">01 · Assistência</span>
+        <h3 class="pillar-title">Tratamento <em>multidisciplinar</em></h3>
+        <p class="pillar-desc">Cuidado ambulatorial gratuito e voluntário para mulheres com transtornos por uso de álcool e outras drogas.</p>
         <ul class="pillar-list">
           <li>Consultas psiquiátricas</li>
           <li>Psicoterapia em grupo</li>
           <li>Abordagem familiar</li>
-          <li>Acompanhamento nutricional</li>
-          <li>Acompanhamento de enfermagem</li>
-          <li>Acompanhamento ginecológico</li>
+          <li>Nutrição, enfermagem e ginecologia</li>
           <li>Orientação jurídica</li>
         </ul>
-        <span class="pillar-link">Ver assistência <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </div>
-    </div>
+        <a href="assistencia.html" class="pillar-link">
+          Ver assistência
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
 
-    <div class="pillar pillar-pesquisa" onclick="location.href='pesquisa.html'">
-      <div class="pillar-icon">
-        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 36V12l8-4 8 4 8-4 8 4v24l-8-4-8 4-8-4-8 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-          <path d="M16 8v28M24 12v28M32 8v28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="pillar-body">
-        <h2 class="pillar-title">Pesquisa</h2>
-        <p class="pillar-desc">Investigação científica sobre preditores de tratamento, tendências temporais e saúde da mulher com transtornos por uso de álcool e outras drogas.</p>
+      <article class="pillar pillar-ensino reveal" onclick="location.href='equipe.html'" role="button" tabindex="0">
+        <span class="pillar-num">02 · Ensino</span>
+        <h3 class="pillar-title">Formação de <em>profissionais</em></h3>
+        <p class="pillar-desc">Estágio de residentes em psiquiatria do IPq com supervisão. Participação em congressos nacionais e internacionais e organização de cursos e jornadas.</p>
         <ul class="pillar-list">
-          <li>Experiência desde 1996</li>
-          <li>Publicações internacionais</li>
-          <li>Projetos em andamento</li>
-          <li>Participação em congressos e simpósios nacionais e internacionais</li>
+          <li>Visão sensível a gênero</li>
+          <li>Profissionais especializados</li>
+          <li>Supervisão clínica multidisciplinar</li>
         </ul>
-        <span class="pillar-link">Ver pesquisa <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </div>
+        <a href="equipe.html" class="pillar-link">
+          Ver equipe
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+
+      <article class="pillar pillar-pesquisa reveal" onclick="location.href='pesquisa.html'" role="button" tabindex="0">
+        <span class="pillar-num">03 · Pesquisa</span>
+        <h3 class="pillar-title">Investigação <em>científica</em></h3>
+        <p class="pillar-desc">Base de dados longitudinal sobre preditores de tratamento, tendências temporais e interseccionalidades em saúde da mulher.</p>
+        <ul class="pillar-list">
+          <li>Início em 1996</li>
+          <li>Publicações em periódicos indexados</li>
+          <li>Projetos em interseccionalidade e novas substâncias</li>
+          <li>Apresentações em congressos nacionais e internacionais</li>
+        </ul>
+        <a href="pesquisa.html" class="pillar-link">
+          Ver pesquisa
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
     </div>
   </section>
 
@@ -128,24 +145,24 @@
   <section class="about-strip">
     <div class="about-strip-inner">
       <div class="about-text">
-        <span class="section-label">Sobre o PROMUD</span>
-        <h2 class="about-title">Um programa construído sobre evidência, ensino e cuidado.</h2>
-        <p>O PROMUD reúne, num mesmo serviço, três frentes que costumam andar separadas: assistência clínica, formação de profissionais e pesquisa longitudinal. Cada paciente atendida contribui — voluntariamente — para uma base de dados que sustenta publicações e refina o cuidado oferecido.</p>
-        <p>O atendimento é voluntário e gratuito, no Instituto de Psiquiatria do Hospital das Clínicas da Faculdade de Medicina da USP.</p>
-        <a href="assistencia.html" class="btn btn-outline">Como funciona a assistência</a>
+        <span class="section-label reveal">Sobre o PROMUD</span>
+        <h2 class="about-title reveal">Um programa construído sobre evidência, ensino e cuidado.</h2>
+        <p class="reveal">O PROMUD reúne, num mesmo serviço, três frentes que costumam andar separadas: assistência clínica, formação de profissionais e pesquisa longitudinal. Cada paciente atendida contribui — voluntariamente — para uma base de dados que sustenta publicações e refina o cuidado oferecido.</p>
+        <p class="reveal">O atendimento é <strong>voluntário e gratuito</strong>, no Instituto de Psiquiatria do Hospital das Clínicas da Faculdade de Medicina da USP.</p>
+        <a href="assistencia.html" class="btn btn-outline reveal">Como funciona a assistência</a>
       </div>
       <div class="about-visual">
-        <div class="about-card">
+        <div class="about-card reveal">
           <div class="about-card-year">1996</div>
-          <div class="about-card-line">Fundação do PROMUD</div>
+          <div class="about-card-line">Fundação do PROMUD no IPq HC-FMUSP</div>
         </div>
-        <div class="about-card">
+        <div class="about-card reveal">
           <div class="about-card-year">2004</div>
-          <div class="about-card-line">Reconhecimento UNODC</div>
+          <div class="about-card-line">Reconhecimento UNODC como modelo replicável</div>
         </div>
-        <div class="about-card highlight">
+        <div class="about-card highlight reveal">
           <div class="about-card-year">Hoje</div>
-          <div class="about-card-line">Equipe multidisciplinar e pesquisa contínua</div>
+          <div class="about-card-line">Equipe multidisciplinar e pesquisa contínua, com PROMUD Trans e novas linhas</div>
         </div>
       </div>
     </div>
@@ -155,39 +172,25 @@
   <section class="history">
     <div class="history-inner">
       <div class="history-head">
-        <span class="section-label">Nossa história</span>
-        <h2 class="history-title">De uma longa tradição de silêncio<br/><em>a um programa específico.</em></h2>
-        <p class="history-lede">Por séculos, o consumo de álcool e outras drogas por mulheres foi lido como falha moral ou anomalia individual. O PROMUD nasce do giro científico que reconheceu a necessidade de cuidado específico — e das profissionais que o tornaram possível.</p>
+        <span class="section-label reveal">Nossa história</span>
+        <h2 class="history-title reveal">De uma longa tradição de silêncio<br/><em>a um programa específico.</em></h2>
+        <p class="history-lede reveal">Por séculos, o consumo de álcool e outras drogas por mulheres foi lido como falha moral ou anomalia individual. O PROMUD nasce do giro científico que reconheceu a necessidade de cuidado específico — e das profissionais que o tornaram possível.</p>
+      </div>
+
+      <!-- Contexto histórico colapsado em pull-quote — em vez de 3 cards densos -->
+      <div class="history-context reveal">
+        <span class="history-context-label">Contexto histórico · uma leitura moral que atravessa séculos</span>
+        <p class="history-context-body">Do <em>Código de Hamurabi</em> (1762 a.C.) ao <em>Talmud</em>, e ainda nos manuais psiquiátricos do século XX, o alcoolismo feminino foi descrito como falha moral, anomalia profunda e de prognóstico mais reservado que o masculino — sem base científica para o pessimismo terapêutico.</p>
+        <div class="history-context-refs">
+          <span>Hamurabi · 1762 a.C.</span>
+          <span>Talmud · séc. V</span>
+          <span>Bleuler · 1943</span>
+          <span>Alonso-Fernández · 1977</span>
+          <span>Ey · 1978</span>
+        </div>
       </div>
 
       <ol class="history-timeline">
-
-        <li class="history-era reveal">
-          <span class="history-era-label">Contexto histórico</span>
-          <div class="history-items">
-            <article class="history-item">
-              <span class="history-year">1762 a.C.</span>
-              <div class="history-body">
-                <h3>Código de Hamurabi</h3>
-                <p>"A mulher que bebe vinho pode ser abandonada a qualquer tempo." O estigma acompanha, desde a Antiguidade, a relação entre mulher e álcool e outras drogas.</p>
-              </div>
-            </article>
-            <article class="history-item">
-              <span class="history-year">Séc. V</span>
-              <div class="history-body">
-                <h3>Talmud</h3>
-                <p>"Um copo de vinho é bom para uma mulher; dois são degradantes; três a induzem ao vício; quatro fazem com que perca todo o senso de vergonha." Uma leitura moral que atravessa séculos.</p>
-              </div>
-            </article>
-            <article class="history-item">
-              <span class="history-year">Séc. XX</span>
-              <div class="history-body">
-                <h3>Psiquiatria do período</h3>
-                <p>Bleuler (1943), Ey (1978), Alonso-Fernández (1977): o alcoolismo feminino é descrito como anomalia mais profunda, de tratamento mais difícil e prognóstico mais reservado que o masculino.</p>
-              </div>
-            </article>
-          </div>
-        </li>
 
         <li class="history-era reveal">
           <span class="history-era-label">Virada científica · no mundo</span>
@@ -264,33 +267,36 @@
   <section class="pubs-strip">
     <div class="pubs-inner">
       <div class="pubs-header">
-        <span class="section-label">Publicações Recentes</span>
-        <a href="pesquisa.html#publicacoes" class="see-all">Ver todas →</a>
+        <div>
+          <span class="section-label reveal">Publicações recentes</span>
+          <h2 class="reveal">Artigos em periódicos internacionais indexados</h2>
+        </div>
+        <a href="pesquisa.html#publicacoes" class="see-all reveal">Ver todas <span aria-hidden="true">→</span></a>
       </div>
       <div class="pubs-grid">
 
-        <a class="pub-card" href="https://doi.org/10.1111/eip.70133" target="_blank" rel="noopener">
+        <a class="pub-card reveal" href="https://doi.org/10.1111/eip.70133" target="_blank" rel="noopener">
           <span class="pub-journal">Early Intervention in Psychiatry · 2026</span>
           <h3 class="pub-title">Gone Too Soon: Higher Pretreatment and Treatment Dropout Among Emerging Adults in a Women-Specific Outpatient Treatment Service</h3>
           <span class="pub-authors">Borges IEL, Stafuzza GDR, Suen PJC, Brasiliano S, Hochgraf PB, Bacchi PS et al.</span>
           <span class="pub-arrow">→</span>
         </a>
 
-        <a class="pub-card" href="https://doi.org/10.1007/s00737-025-01601-1" target="_blank" rel="noopener">
+        <a class="pub-card reveal" href="https://doi.org/10.1007/s00737-025-01601-1" target="_blank" rel="noopener">
           <span class="pub-journal">Archives of Women's Mental Health · 2025</span>
           <h3 class="pub-title">Expanding Gender-Sensitive and Equitable Substance Use Care Models: PROMUD Replication in Psychosocial Units in Brazil</h3>
           <span class="pub-authors">Bacchi PS, Carezzato F, di Santi T, Suen P, Brasiliano S, Hochgraf P et al.</span>
           <span class="pub-arrow">→</span>
         </a>
 
-        <a class="pub-card" href="https://doi.org/10.3389/fpsyt.2024.1456148" target="_blank" rel="noopener">
+        <a class="pub-card reveal" href="https://doi.org/10.3389/fpsyt.2024.1456148" target="_blank" rel="noopener">
           <span class="pub-journal">Frontiers in Psychiatry · 2024</span>
           <h3 class="pub-title">Case Series: Five Women with Zolpidem Dependence from a Brazilian Women-Specific Substance Use Disorder Outpatient Service</h3>
           <span class="pub-authors">Leal G, Studart I, Figueiredo CPM, di Santi T, Suen P, Brasiliano S, Hochgraf PB, Bacchi PS</span>
           <span class="pub-arrow">→</span>
         </a>
 
-        <a class="pub-card" href="https://doi.org/10.1007/s11469-024-01428-4" target="_blank" rel="noopener">
+        <a class="pub-card reveal" href="https://doi.org/10.1007/s11469-024-01428-4" target="_blank" rel="noopener">
           <span class="pub-journal">International Journal of Mental Health and Addiction · 2024</span>
           <h3 class="pub-title">Risk Factors and Temporal Trends in Alcohol Dependence Severity Among Women Admitted to a Gender-Specific Outpatient Service Across 23 Years</h3>
           <span class="pub-authors">Figueiredo CPM, Hochgraf P, Suen P et al.</span>
@@ -301,25 +307,24 @@
     </div>
   </section>
 
-  <!-- CTA BUSCAR ATENDIMENTO -->
+  <!-- CTA BUSCAR ATENDIMENTO — única seção em vermelho, hierarquia clara -->
   <section class="cta-section">
     <div class="cta-inner">
-      <div class="cta-text">
-        <h2 class="cta-title">Você ou alguém que você conhece precisa de ajuda?</h2>
-        <p class="cta-desc">O primeiro passo é o formulário de contato. A equipe avaliará sua inscrição e dará retorno para agendar a triagem.</p>
-        <div class="cta-actions">
-          <a href="https://forms.gle/j1ZZpUedTJnzudqb7" target="_blank" class="btn btn-primary">Entrar em contato</a>
-          <a href="assistencia.html#contato" class="btn btn-ghost-light">Mais informações</a>
-        </div>
-        <p class="cta-note">⚠️ Não atendemos urgência e emergência. Para essas situações, vá ao Pronto Atendimento mais próximo.</p>
+      <span class="section-label">Buscar atendimento</span>
+      <h2 class="cta-title">Você ou alguém que você conhece <em>precisa de ajuda?</em></h2>
+      <p class="cta-desc">O primeiro passo é o formulário de contato. A equipe avaliará sua inscrição e dará retorno para agendar a triagem.</p>
+      <div class="cta-actions">
+        <a href="https://forms.gle/j1ZZpUedTJnzudqb7" target="_blank" class="btn btn-primary btn-arrow">Entrar em contato</a>
+        <a href="assistencia.html#contato" class="btn btn-ghost-light">Mais informações</a>
       </div>
+      <p class="cta-note">⚠️ <strong>Não atendemos urgência e emergência.</strong> Para essas situações, vá ao Pronto Atendimento mais próximo, ligue para o SAMU (192) ou CVV (188).</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
-        <div class="footer-brand">
+      <div class="footer-brand">
         <a href="index.html" class="logo-wrap">
           <img src="assets/logo.svg" alt="PROMUD — IPq HC-FMUSP" class="logo-img logo-img-footer" />
         </a>
@@ -329,7 +334,7 @@
         <div class="footer-col">
           <h4>Assistência</h4>
           <a href="assistencia.html">Como funciona</a>
-          <a href="assistencia.html#equipe">Equipe</a>
+          <a href="equipe.html">Equipe</a>
           <a href="assistencia.html#contato">Buscar atendimento</a>
         </div>
         <div class="footer-col">
