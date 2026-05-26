@@ -16,7 +16,7 @@ on:
         default: false
 
 concurrency:
-  group: deploy-hostgator-${{ github.event.inputs.target || 'preview' }}
+  group: deploy-hostgator-${{ github.event.inputs.target || 'production' }}
   cancel-in-progress: false
 
 jobs:
@@ -28,12 +28,12 @@ jobs:
       - name: Resolve deploy target
         id: target
         run: |
-          if [ "${{ github.event.inputs.target }}" = "production" ]; then
-            echo "server-dir=${{ secrets.FTP_SERVER_DIR }}" >> "$GITHUB_OUTPUT"
-            echo "Deploying to PRODUCTION"
-          else
+          if [ "${{ github.event.inputs.target }}" = "preview" ]; then
             echo "server-dir=${{ secrets.FTP_SERVER_DIR }}preview/" >> "$GITHUB_OUTPUT"
             echo "Deploying to PREVIEW subdirectory"
+          else
+            echo "server-dir=${{ secrets.FTP_SERVER_DIR }}" >> "$GITHUB_OUTPUT"
+            echo "Deploying to PRODUCTION"
           fi
 
       - name: FTPS deploy
