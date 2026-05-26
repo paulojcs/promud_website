@@ -1,0 +1,66 @@
+name: Deploy to HostGator
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Deploy target'
+        type: choice
+        options: [preview, production]
+        default: preview
+      dry-run:
+        description: 'Preview only — log what would change, do not upload'
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy-hostgator-${{ github.event.inputs.target || 'preview' }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve deploy target
+        id: target
+        run: |
+          if [ "${{ github.event.inputs.target }}" = "production" ]; then
+            echo "server-dir=${{ secrets.FTP_SERVER_DIR }}" >> "$GITHUB_OUTPUT"
+            echo "Deploying to PRODUCTION"
+          else
+            echo "server-dir=${{ secrets.FTP_SERVER_DIR }}preview/" >> "$GITHUB_OUTPUT"
+            echo "Deploying to PREVIEW subdirectory"
+          fi
+
+      - name: FTPS deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ steps.target.outputs.server-dir }}
+          protocol: ftps
+          security: loose
+          local-dir: ./
+          dry-run: ${{ github.event.inputs.dry-run == 'true' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.claude/**
+            **/memory/**
+            **/node_modules/**
+            **/.DS_Store
+            **/.gitignore
+            **/.gitattributes
+            **/*.md
+            **/.well-known/**
+            **/.htaccess
+            **/admin/**
+            **/*.sql
+            **/error_log
+            **/Silvia_Brasiliano_Doutorado.pdf
