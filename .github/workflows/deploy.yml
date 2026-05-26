@@ -9,7 +9,7 @@ on:
         description: 'Deploy target'
         type: choice
         options: [preview, production]
-        default: preview
+        default: production
       dry-run:
         description: 'Preview only — log what would change, do not upload'
         type: boolean
