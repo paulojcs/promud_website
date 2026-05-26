@@ -7,7 +7,11 @@
       "Bash(mkdir -p design_extract)",
       "Bash(tar -xzf webfetch-1779371360639-pppos3.bin -C design_extract)",
       "PowerShell($src = \"C:\\\\Users\\\\paulo\\\\.claude\\\\projects\\\\c--Users-paulo-Documents-PROMUD-website-promud-website-promud\\\\4ff5cc0c-3005-4a87-adee-4d3d961654c3\\\\tool-results\\\\design_extract\\\\site-promud\\\\project\"; $dst = \"c:\\\\Users\\\\paulo\\\\Documents\\\\PROMUD\\\\website\\\\promud_website\\\\promud\"; \"index.html\",\"style.css\",\"main.js\",\"assistencia.html\",\"pesquisa.html\",\"equipe.html\" | ForEach-Object { Copy-Item -Path \\(Join-Path $src $_\\) -Destination \\(Join-Path $dst $_\\) -Force; \"copied $_\" })",
-      "PowerShell(git -C \"c:\\\\Users\\\\paulo\\\\Documents\\\\PROMUD\\\\website\\\\promud_website\\\\promud\" status --short)"
+      "PowerShell(git -C \"c:\\\\Users\\\\paulo\\\\Documents\\\\PROMUD\\\\website\\\\promud_website\\\\promud\" status --short)",
+      "mcp__claude_ai_PubMed__get_article_metadata",
+      "Bash(git ls-remote *)",
+      "Bash(git fetch *)",
+      "Read(//c/Users/paulo/Documents/PROMUD/website/promud_website/**)"
     ]
   }
 }
