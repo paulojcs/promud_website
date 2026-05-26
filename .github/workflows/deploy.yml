@@ -58,6 +58,8 @@ jobs:
             **/.gitignore
             **/.gitattributes
             **/*.md
+            **/*.bak
+            **/*.code-workspace
             **/.well-known/**
             **/.htaccess
             **/admin/**
