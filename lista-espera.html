@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de espera — PROMUD · IPq HC-FMUSP</title>
+  <meta name="description" content="O PROMUD está com as vagas esgotadas e não recebe novas inscrições para triagem no momento. Deixe seu contato para ser avisada quando novas vagas forem abertas." />
+
+  <!-- Open Graph / link preview (WhatsApp, Facebook, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PROMUD — Programa da Mulher com Dependência Química" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Lista de espera — PROMUD · IPq HC-FMUSP" />
+  <meta property="og:description" content="O PROMUD está com as vagas esgotadas e não recebe novas inscrições para triagem no momento. Deixe seu contato para ser avisada quando novas vagas forem abertas." />
+  <meta property="og:url" content="https://mulherdependentequimica.com.br/lista-espera.html" />
+  <meta property="og:image" content="https://mulherdependentequimica.com.br/assets/logo.jpg" />
+  <meta property="og:image:alt" content="PROMUD" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,350;0,6..72,400;0,6..72,450;0,6..72,500;1,6..72,300;1,6..72,400&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="assets/logo.svg" alt="PROMUD — IPq HC-FMUSP" class="logo-img" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="assistencia.html" class="nav-link">Assistência</a>
+        <a href="equipe.html" class="nav-link">Equipe</a>
+        <a href="pesquisa.html" class="nav-link">Pesquisa</a>
+        <a href="lista-espera.html" class="nav-cta">Lista de espera</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html">Início</a>
+      <a href="assistencia.html">Assistência</a>
+      <a href="equipe.html">Equipe</a>
+      <a href="pesquisa.html">Pesquisa</a>
+      <a href="lista-espera.html">Lista de espera</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="page-hero-badge fade-up">Lista de espera</span>
+      <h1 class="fade-up delay-1">No momento, estamos com as<br/><em>vagas esgotadas.</em></h1>
+      <p class="fade-up delay-2">O PROMUD não está recebendo novas inscrições para triagem. A previsão é de que novas vagas sejam abertas apenas no próximo ano. Se você tem interesse, deixe seu contato — avisaremos você assim que houver vagas.</p>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO DE LISTA DE ESPERA -->
+  <section class="content-section" id="lista">
+    <span class="section-label reveal">Deixe seu contato</span>
+    <h2 class="reveal" style="max-width: 560px; margin-bottom: 0.5rem;">Avisamos você quando abrirmos novas vagas</h2>
+    <p class="reveal" style="color: var(--ink-mid); max-width: 620px; margin-bottom: 0;">Preencha os campos abaixo. Guardaremos seu contato e entraremos em contato por e-mail ou telefone quando o programa voltar a receber inscrições.</p>
+
+    <div class="waitlist-grid">
+      <!-- FORM -->
+      <div class="form-card reveal">
+        <!--
+          ==========================================================
+          GOOGLE FORMS — "Lista de interesse PROMUD"
+          ----------------------------------------------------------
+          As respostas vão para o formulário
+          .../forms/d/e/1FAIpQLSePmjL7hLTIKDkXXTg5tt8aDSrd7aWzos8jZLTStoqcVA-XIQ
+          Mapeamento dos campos:
+            Nome     -> entry.332212174
+            Email    -> entry.57124771
+            Telefone -> entry.941485627
+          Se o formulário do Google for recriado, os ids "entry." mudam
+          e precisam ser atualizados aqui (ver código-fonte do
+          formulário publicado). O formulário precisa continuar aberto
+          a qualquer pessoa, sem exigir login do Google.
+          ==========================================================
+        -->
+        <!-- target/novalidate são aplicados pelo main.js: sem JavaScript, o envio
+             segue direto para a página de confirmação do Google. -->
+        <form id="waitlist-form"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSePmjL7hLTIKDkXXTg5tt8aDSrd7aWzos8jZLTStoqcVA-XIQ/formResponse"
+              method="POST">
+          <div class="field">
+            <label for="wl-nome">Nome completo</label>
+            <input type="text" id="wl-nome" name="entry.332212174" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="wl-email">E-mail</label>
+            <input type="email" id="wl-email" name="entry.57124771" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="wl-telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="wl-telefone" name="entry.941485627" autocomplete="tel" placeholder="(11) 90000-0000" required />
+            <span class="field-hint">Com DDD. Usamos este número para entrar em contato.</span>
+          </div>
+
+          <button type="submit" class="btn btn-red btn-arrow" id="waitlist-submit">Entrar na lista de espera</button>
+
+          <p class="form-status" id="waitlist-status" role="status" aria-live="polite"></p>
+
+          <p class="form-note">
+            Seus dados serão usados apenas para comunicar a abertura de novas vagas e serão tratados
+            de forma confidencial pela equipe do PROMUD. Entrar na lista de espera não garante vaga
+            nem agendamento de triagem — a admissão continua sujeita aos
+            <a href="assistencia.html#contato">critérios do programa</a>.
+          </p>
+        </form>
+
+        <div class="form-success" id="waitlist-success" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+          <h3>Contato registrado.</h3>
+          <p>Você está na nossa lista de espera. Entraremos em contato por e-mail ou telefone quando novas vagas forem abertas. Não é necessário enviar o formulário novamente.</p>
+        </div>
+
+        <iframe name="waitlist-sink" id="waitlist-sink" title="Envio do formulário" tabindex="-1" aria-hidden="true" style="display:none;"></iframe>
+      </div>
+
+      <!-- ASIDE -->
+      <aside class="waitlist-aside">
+        <div class="info-card reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            O que acontece agora
+          </h3>
+          <ul>
+            <li>Seu contato fica registrado na lista de espera do programa.</li>
+            <li>Quando novas vagas forem abertas, a equipe entra em contato por e-mail ou telefone.</li>
+            <li>A entrada no tratamento continua passando pela triagem presencial e pelos critérios de admissão.</li>
+            <li>Não há necessidade de ligar ou reenviar o formulário para confirmar a inscrição.</li>
+          </ul>
+        </div>
+
+        <div class="info-card reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Enquanto isso, onde buscar ajuda
+          </h3>
+          <ul>
+            <li>Procure a Unidade Básica de Saúde (UBS) do seu bairro — é a porta de entrada da rede pública e pode encaminhar você para tratamento.</li>
+            <li>Os CAPS AD (Centros de Atenção Psicossocial Álcool e Drogas) atendem transtornos por uso de álcool e outras drogas em todo o município.</li>
+            <li>O CVV (188) oferece apoio emocional gratuito, por telefone, 24 horas por dia.</li>
+          </ul>
+        </div>
+
+        <div class="waitlist-warning">
+          ⚠️ <strong>Não atendemos urgências e emergências.</strong> Para essas situações, dirija-se ao Pronto Atendimento mais próximo ou ligue para o SAMU (192) ou CVV (188).
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- OUTROS CANAIS -->
+  <section class="content-section" style="padding-top: 4rem; padding-bottom: var(--space-xl);">
+    <span class="section-label reveal">Outros canais</span>
+    <div class="contact-block reveal">
+      <div>
+        <h2>Dúvidas sobre o programa.</h2>
+        <p>Para dúvidas sobre o funcionamento do PROMUD, encaminhamentos e questões administrativas, fale com a equipe pelos canais ao lado. Novas inscrições para triagem, porém, só serão retomadas quando houver vagas — e o aviso será feito pela lista de espera.</p>
+        <a href="assistencia.html" class="btn btn-ghost-light">Como funciona o tratamento</a>
+      </div>
+      <div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div class="contact-item-text">
+            <span class="contact-item-label">Telefone (Iracema)</span>
+            <span class="contact-item-val"><a href="tel:+551130821876">(11) 3082-1876</a></span>
+            <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">Segunda a sexta-feira, 08h–18h</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div class="contact-item-text">
+            <span class="contact-item-label">E-mail</span>
+            <span class="contact-item-val"><a href="mailto:promud.ipq@hc.fm.usp.br">promud.ipq@hc.fm.usp.br</a></span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="contact-item-text">
+            <span class="contact-item-label">Endereço</span>
+            <span class="contact-item-val">Rua Dr. Ovídio Pires de Campos, 785<br/>Cerqueira César — São Paulo, SP</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <div class="contact-item-text">
+            <span class="contact-item-label">Instagram</span>
+            <span class="contact-item-val"><a href="https://www.instagram.com/promud.ipq/" target="_blank" rel="noopener">@promud.ipq</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-wrap">
+          <img src="assets/logo.svg" alt="PROMUD — IPq HC-FMUSP" class="logo-img logo-img-footer" />
+        </a>
+        <p class="footer-tagline">Programa da Mulher Dependente Química<br/>Instituto de Psiquiatria · Hospital das Clínicas · FMUSP</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Assistência</h4>
+          <a href="assistencia.html">Como funciona</a>
+          <a href="equipe.html">Equipe</a>
+          <a href="lista-espera.html">Lista de espera</a>
+        </div>
+        <div class="footer-col">
+          <h4>Pesquisa</h4>
+          <a href="pesquisa.html#publicacoes">Publicações</a>
+          <a href="pesquisa.html#livros">Livros</a>
+          <a href="pesquisa.html#projetos">Projetos em andamento</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <a href="mailto:promud.ipq@hc.fm.usp.br">promud.ipq@hc.fm.usp.br</a>
+          <a href="tel:+551130821876">(11) 3082-1876</a>
+          <span class="footer-hours">Seg–Sex, 08h–18h (Iracema)</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 PROMUD — Instituto de Psiquiatria HC-FMUSP. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

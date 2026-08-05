@@ -1567,3 +1567,172 @@ em {
   .footer-links { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ============================================
+   LISTA DE ESPERA (formulário)
+   ============================================ */
+.waitlist-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+.waitlist-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.waitlist-warning {
+  background: rgba(184,49,37,0.07);
+  border: 1px solid rgba(184,49,37,0.22);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+.waitlist-warning strong { color: var(--red-deep); font-weight: 600; }
+
+/* ---- FORM CARD ---- */
+.form-card {
+  background: var(--paper-light);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+}
+.field { margin-bottom: 1.35rem; }
+.field label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.5rem;
+}
+.field input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.field input::placeholder { color: var(--ink-soft); opacity: 0.6; }
+.field input:hover { border-color: var(--teal-line); }
+.field input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-soft);
+}
+.field input.invalid {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(184,49,37,0.10);
+}
+.field-hint {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  margin-top: 0.45rem;
+  line-height: 1.5;
+}
+#waitlist-submit { margin-top: 0.5rem; }
+#waitlist-submit[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.form-status {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--red-deep);
+  margin-top: 1rem;
+}
+.form-status:empty { display: none; }
+.form-note {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule-soft);
+}
+.form-note a { color: var(--teal); border-bottom: 1px solid var(--teal-line); }
+.form-note a:hover { color: var(--teal-deep); border-bottom-color: var(--teal); }
+
+/* ---- ESTADO DE SUCESSO ---- */
+.form-success[hidden] { display: none; }
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+.form-success svg {
+  width: 34px; height: 34px;
+  color: var(--teal);
+}
+.form-success h3 {
+  font-size: 1.35rem;
+  color: var(--teal-darker);
+}
+.form-success p {
+  font-size: 0.92rem;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+/* ---- AVISO DE VAGAS ESGOTADAS (index / assistência) ---- */
+.slots-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  background: rgba(217,147,121,0.14);
+  border: 1px solid rgba(217,121,65,0.28);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--ink-mid);
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.slots-notice svg {
+  width: 19px; height: 19px;
+  color: var(--terracotta-deep);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.slots-notice strong { color: var(--teal-darker); font-weight: 600; }
+.contact-block .slots-notice {
+  background: rgba(217,147,121,0.14);
+  border-color: rgba(217,147,121,0.35);
+  color: rgba(255,255,255,0.85);
+}
+.contact-block .slots-notice svg { color: var(--peach); }
+.contact-block .slots-notice strong { color: var(--peach-soft); }
+.cta-section .slots-notice {
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.85);
+  max-width: 620px;
+  margin: 0 0 1.75rem;
+}
+.cta-section .slots-notice svg { color: var(--peach-soft); }
+.cta-section .slots-notice strong { color: #fff; }
+
+@media (max-width: 1024px) {
+  .waitlist-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .form-card { padding: 1.75rem 1.35rem; }
+  #waitlist-submit { width: 100%; justify-content: center; }
+}
